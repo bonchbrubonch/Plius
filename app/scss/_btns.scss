@@ -1,0 +1,18 @@
+.btn {
+	padding: 15px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 140%;
+	text-transform: uppercase;
+	border: 1px solid rgb(0, 0, 0);
+	transition: linear .2s;
+	&:hover{
+		background-color: #000;
+		color: #fff;
+	}
+}
