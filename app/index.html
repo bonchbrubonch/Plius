@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,6 +18,7 @@
     integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -90,22 +96,24 @@
       <section class="intro">
         <div class="intro__slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('images/content/intro-slider1.jpg');">
+            <div class="swiper-slide" style="background-image: url('images/content/intro-slider1.webp');">
               <div class="container">
                 <h1>Lorem ipsum dolor sit amet</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur. Rutrum egestas sodales ultricies interdum semper tristique aliquet adipiscing et. 
+                  Lorem ipsum dolor sit amet consectetur. Rutrum egestas sodales ultricies interdum semper tristique
+                  aliquet adipiscing et.
                 </p>
                 <a href="#" class="btn">
                   View more
                 </a>
               </div>
             </div>
-            <div class="swiper-slide" style="background-image: url('images/content/intro-slider1.jpg');">
+            <div class="swiper-slide" style="background-image: url('images/content/intro-slider1.webp');">
               <div class="container">
                 <h2>Lorem ipsum dolor sit amet 123</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur. Rutrum egestas sodales ultricies interdum semper tristique aliquet adipiscing et. 
+                  Lorem ipsum dolor sit amet consectetur. Rutrum egestas sodales ultricies interdum semper tristique
+                  aliquet adipiscing et.
                 </p>
                 <a href="#" class="btn">
                   View more
@@ -121,14 +129,504 @@
           </div>
         </div>
       </section>
+
+      <section class="box-slider">
+        <div class="container">
+          <h3 class="title">
+            Our Bestsellers
+          </h3>
+          <div class="product-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__yellow">best</li>
+                    <li class="stickers__red">sale</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-1.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__yellow">best</li>
+                    <li class="stickers__red">sale</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-2.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__yellow">best</li>
+                    <li class="stickers__red">sale</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-3.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__yellow">best</li>
+                    <li class="stickers__red">sale</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-4.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__yellow">best</li>
+                    <li class="stickers__red">sale</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-1.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <img src="images/icons/arrow-down.svg" alt="arrow">
+            </div>
+            <div class="swiper-button-prev">
+              <img src="images/icons/arrow-down.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="more-offers">
+        <div class="container">
+          <h3 class="title">
+            More offers
+          </h3>
+          <ul class="category-list">
+            <li class="category-list__item" style="background-image: url('images/content/intro-slider1.webp');">
+              <h6>Category name</h6>
+              <a href="#" class="btn">View more</a>
+            </li>
+            <li class="category-list__item" style="background-image: url('images/content/category-item1.webp');">
+              <h6>Category name</h6>
+              <a href="#" class="btn">View more</a>
+            </li>
+            <li class="category-list__item" style="background-image: url('images/content/category-item2.webp');">
+              <h6>Category name</h6>
+              <a href="#" class="btn">View more</a>
+            </li>
+            <li class="category-list__item" style="background-image: url('images/content/category-item3.webp');">
+              <h6>Category name</h6>
+              <a href="#" class="btn">View more</a>
+            </li>
+            <li class="category-list__item" style="background-image: url('images/content/category-item2.webp');">
+              <h6>Category name</h6>
+              <a href="#" class="btn">View more</a>
+            </li>
+          </ul>
+          <a href="#" class="btn">View more</a>
+        </div>
+      </section>
+
+      <section class="box-slider box-slider--twoo">
+        <div class="container">
+          <h3 class="title">
+            new products
+          </h3>
+          <div class="product-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__green">new</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-1.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__green">new</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-2.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__green">new</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-3.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__green">new</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-4.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-item">
+                  <ul class="stickers">
+                    <li class="stickers__green">new</li>
+                  </ul>
+                  <div class="product-item__img">
+                    <img class="product-item__img-one" src="images/content/product-1.webp" alt="product">
+                    <img class="product-item__img-two" src="images/content/product-1.1.webp" alt="product">
+                  </div>
+                  <div class="product-item__btns">
+                    <a href="#" class="btn btn--dark">Quick view</a>
+                    <a href="#" class="btn btn--dark">Quick order</a>
+                  </div>
+                  <div class="product-item__inner">
+                    <h6>Product name product name</h6>
+                    <p>Category</p>
+                    <div class="product-item__box">
+                      <div class="product-item__price">
+                        1420 €
+                      </div>
+                      <div class="product-item__old-price">
+                        1700 €
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <img src="images/icons/arrow-down.svg" alt="arrow">
+            </div>
+            <div class="swiper-button-prev">
+              <img src="images/icons/arrow-down.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="review">
+        <div class="container">
+          <h3 class="title">
+            What they say about us
+          </h3>
+          <div class="review__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide review__item">
+                <div class="review__top">
+                  <div class="review__avatar">
+                    <span>a</span>
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Alexander </div>
+                    <div class="review__date">30.07.2023</div>
+                  </div>
+                  <div class="rateYo_reviews"></div>
+                </div>
+                <h6>Product name in one or two lines</h6>
+                <span>product review</span>
+                <div class="review__text">
+                  <p>Lorem ipsum dolor sit amet consectetur. Aliquet sit praesent libero non amet. Viverra commodo eros
+                    felis elit tellus augue porttitor feugiat. Eu amet nisl quis eleifend sit condimentum ac nisl.
+                    Tellus neque ultrices amet viverra a sit cursus.</p>
+                </div>
+                <button class="review__more">Read more <img src="images/icons/arrow-right.svg" alt="arrow"></button>
+              </div>
+              <div class="swiper-slide review__item">
+                <div class="review__top">
+                  <div class="review__avatar">
+                    <img src="images/content/avatar.jpg" alt="avatar">
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Alexander </div>
+                    <div class="review__date">30.07.2023</div>
+                  </div>
+                  <div class="rateYo_reviews"></div>
+                </div>
+                <h6>Product name in one or two lines</h6>
+                <span>product review</span>
+                <div class="review__text">
+                  <p>Lorem ipsum dolor sit amet consectetur. Aliquet sit praesent libero non amet. Viverra commodo eros
+                    felis elit tellus augue porttitor feugiat. Eu amet nisl quis eleifend sit condimentum ac nisl.
+                    Tellus neque ultrices amet viverra a sit cursus.</p>
+                </div>
+                <button class="review__more">Read more <img src="images/icons/arrow-right.svg" alt="arrow"></button>
+              </div>
+              <div class="swiper-slide review__item">
+                <div class="review__top">
+                  <div class="review__avatar">
+                    <span>a</span>
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Alexander </div>
+                    <div class="review__date">30.07.2023</div>
+                  </div>
+                  <div class="rateYo_reviews"></div>
+                </div>
+                <h6>Product name in one or two lines</h6>
+                <span>product review</span>
+                <div class="review__text">
+                  <p>Lorem ipsum dolor sit amet consectetur. Aliquet sit praesent libero non amet. Viverra commodo eros
+                    felis elit tellus augue porttitor feugiat. Eu amet nisl quis eleifend sit condimentum ac nisl.
+                    Tellus neque ultrices amet viverra a sit cursus.</p>
+                </div>
+                <button class="review__more">Read more <img src="images/icons/arrow-right.svg" alt="arrow"></button>
+              </div>
+              <div class="swiper-slide review__item">
+                <div class="review__top">
+                  <div class="review__avatar">
+                    <span>a</span>
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Alexander </div>
+                    <div class="review__date">30.07.2023</div>
+                  </div>
+                  <div class="rateYo_reviews"></div>
+                </div>
+                <h6>Product name in one or two lines</h6>
+                <span>product review</span>
+                <div class="review__text">
+                  <p>Lorem ipsum dolor sit amet consectetur. Aliquet sit praesent libero non amet. Viverra commodo eros
+                    felis elit tellus augue porttitor feugiat. Eu amet nisl quis eleifend sit condimentum ac nisl.
+                    Tellus neque ultrices amet viverra a sit cursus.</p>
+                </div>
+                <button class="review__more">Read more <img src="images/icons/arrow-right.svg" alt="arrow"></button>
+              </div>
+              <div class="swiper-slide review__item">
+                <div class="review__top">
+                  <div class="review__avatar">
+                    <span>a</span>
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Alexander </div>
+                    <div class="review__date">30.07.2023</div>
+                  </div>
+                  <div class="rateYo_reviews"></div>
+                </div>
+                <h6>Product name in one or two lines</h6>
+                <span>product review</span>
+                <div class="review__text">
+                  <p>Lorem ipsum dolor sit amet consectetur. Aliquet sit praesent libero non amet. Viverra commodo eros
+                    felis elit tellus augue porttitor feugiat. Eu amet nisl quis eleifend sit condimentum ac nisl.
+                    Tellus neque ultrices amet viverra a sit cursus.</p>
+                </div>
+                <button class="review__more">Read more <img src="images/icons/arrow-right.svg" alt="arrow"></button>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <img src="images/icons/arrow-down.svg" alt="arrow">
+            </div>
+            <div class="swiper-button-prev">
+              <img src="images/icons/arrow-down.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe">
+        <div class="container">
+          <div class="subscribe__inner">
+            <div class="subscribe__left">
+              <h3 class="title">
+                Don't miss the latest news
+              </h3>
+              <p>Subscribe to the newsletter to find out the most important news and receive exclusive offers!</p>
+            </div>
+            <div class="subscribe__right">
+              <form class="form">
+                <div class="form__inner">
+                  <div class="form__input-wrap">
+                    <input type="email" placeholder="Your email address" required>
+                  </div>
+                  <button class="btn btn--yellow" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </main>
     <footer class="footer"></footer>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
     integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 
 
   <script src="js/main.min.js"></script>

@@ -257,6 +257,16 @@
 .intro {
 	&__slider {
 		position: relative;
+
+		.swiper-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+		}
+
+		.swiper-slide {
+			height: auto;
+		}
 	}
 
 	.swiper-button-next,
@@ -272,25 +282,27 @@
 		border: 1px solid rgba(43, 42, 41, 0.3);
 		background: #fff;
 		transition: linear .2s;
+
 		&::after,
-		&::before{
+		&::before {
 			display: none;
 		}
 
 	}
 
 	.swiper-button-next {
-		right: calc((1920px - 1200px) / 2);
-		
-		img{
+		right: calc((1920px - 1260px) / 2);
+
+		img {
 			transform: rotate(-90deg);
 		}
 	}
 
 	.swiper-button-prev {
 		left: auto;
-		right: calc((1920px - 1080px) / 2);
-		img{
+		right: calc((1920px - 1140px) / 2);
+
+		img {
 			transform: rotate(90deg);
 		}
 	}
@@ -326,10 +338,258 @@
 
 /*ebd intro======================*/
 
+/*start box-slider========*/
+.box-slider {
+
+	.container {
+		overflow: hidden;
+	}
+
+	padding: 160px 0 50px;
+
+	.title {
+		margin: 0 0 55px 0;
+	}
+
+	&--twoo {
+		padding: 40px 0 60px;
+	}
+}
+
+.product-slider {
+	position: relative;
 
 
+}
+
+/*end box-slider========*/
+
+/*start more-offers=========*/
+.more-offers {
+	padding: 40px 0 40px;
+
+	.title {
+		margin: 0 0 40px 0;
+	}
+
+	.container>.btn {
+		margin: 20px auto 0;
+	}
+}
+
+.category-list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 20px;
+
+	&__item {
+		margin: 0 0 20px 0;
+		height: 305px;
+		padding: 40px 20px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center right;
+		width: calc(33.33333% - 20px);
+
+		h6 {
+			margin: 0 0 20px 0;
+			color: rgb(43, 42, 41);
+			font-size: 22px;
+			font-weight: 500;
+			line-height: 18px;
+		}
+
+		.btn {
+			text-transform: uppercase;
+			padding: 7px 18px;
+			font-size: 12px;
+		}
+	}
+
+	&__item:nth-child(5n + 1) {
+		width: calc(60% - 20px);
+	}
+
+	&__item:nth-child(5n + 2) {
+		width: calc(40% - 20px);
+	}
+}
+
+/*end more-offers=========*/
+
+/*start review===============*/
+.review {
+	padding: 50px 0 150px;
+
+	.container {
+		overflow: hidden;
+	}
+
+	.title {
+		margin: 0 0 60px 0;
+	}
+
+	&__slider {
+		position: relative;
+	}
+
+	&__item {
+		h6 {
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 18px;
+		}
+
+		span {
+			color: rgb(134, 142, 150);
+			font-family: "Montserrat", sans-serif;
+			font-size: 10px;
+			font-weight: 400;
+			line-height: 120%;
+		}
+
+	}
+
+	&__top {
+		margin: 0 0 15px 0;
+		display: flex;
+		align-items: center;
+
+		.rateYo_reviews {
+			margin: 0 0 0 auto;
+		}
+	}
+
+	&__avatar {
+		margin: 0 12px 0 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: rgb(255, 237, 0);
+		overflow: hidden;
+
+		span {
+			color: rgb(0, 0, 0);
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 18px;
+			text-transform: uppercase;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column
+	}
+
+	&__name {
+		margin: 0 0 2px 0;
+		color: rgb(22, 17, 12);
+		font-family: "Montserrat", sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 120%;
+	}
+
+	&__date {
+		color: rgb(134, 142, 150);
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 18px;
+	}
+
+	&__text {
+		margin: 7px 0 25px 0;
+
+		p {
+			margin: 0 0 10px 0;
+		}
+
+		-ms-text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-ms-line-clamp: 4;
+		-webkit-line-clamp: 4;
+		line-clamp: 4;
+		display: -webkit-box;
+		display: box;
+		word-wrap: break-word;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+	}
+
+	&__more {
+		padding: 0;
+		display: flex;
+		align-items: center;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+
+		img {
+			margin: 0 0 0 10px;
+			transition: linear .2s;
+		}
+
+		&:hover {
+			img {
+				transform: translateX(3px);
+			}
+		}
+	}
+}
+
+/*end review===============*/
+
+/*start subscribe==============*/
+.subscribe {
+	padding: 50px 0;
+	background-color: #F4F4F4;
+	.title{
+		margin: 0 0 15px 0;
+	}
+	&__inner {
+		max-width: 1140px;
+		empty-cells: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__left {
+		max-width: 530px;
+		width: 100%;
+		margin: 0 30px 0 0;
 
 
+		p {
+			margin: 0;
+			font-family: "Montserrat", sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
+
+	&__right {
+		max-width: 550px;
+		width: 100%;
+	}
+}
+
+/*end subscribe==============*/
 
 
 
