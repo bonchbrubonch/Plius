@@ -20,6 +20,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+  integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -152,7 +156,7 @@
                     <a href="#" class="btn btn--dark">Quick order</a>
                   </div>
                   <div class="product-item__inner">
-                    <h6>Product name product name</h6>
+                    <h6>Product name product name Product name product name</h6>
                     <p>Category</p>
                     <div class="product-item__box">
                       <div class="product-item__price">
@@ -236,7 +240,7 @@
                     <a href="#" class="btn btn--dark">Quick order</a>
                   </div>
                   <div class="product-item__inner">
-                    <h6>Product name product name</h6>
+                    <h6>Product name product name Product name product name</h6>
                     <p>Category</p>
                     <div class="product-item__box">
                       <div class="product-item__price">
@@ -326,8 +330,7 @@
           </h3>
           <div class="product-slider">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="product-item">
+              <div class="swiper-slide product-item">
                   <ul class="stickers">
                     <li class="stickers__green">new</li>
                   </ul>
@@ -340,7 +343,7 @@
                     <a href="#" class="btn btn--dark">Quick order</a>
                   </div>
                   <div class="product-item__inner">
-                    <h6>Product name product name</h6>
+                    <h6>Product name product name Product name product name</h6>
                     <p>Category</p>
                     <div class="product-item__box">
                       <div class="product-item__price">
@@ -351,10 +354,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="product-item">
+              <div class="swiper-slide product-item">
                   <ul class="stickers">
                     <li class="stickers__green">new</li>
                   </ul>
@@ -378,10 +379,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="product-item">
+              <div class="swiper-slide product-item">
                   <ul class="stickers">
                     <li class="stickers__green">new</li>
                   </ul>
@@ -405,10 +404,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="product-item">
+              <div class="swiper-slide product-item">
                   <ul class="stickers">
                     <li class="stickers__green">new</li>
                   </ul>
@@ -432,10 +429,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="product-item">
+              <div class="swiper-slide product-item">
                   <ul class="stickers">
                     <li class="stickers__green">new</li>
                   </ul>
@@ -459,7 +454,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
             <div class="swiper-button-next">
@@ -615,7 +609,73 @@
 
 
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__col">
+            <a href="#" class="footer__logo">
+              <img src="images/icons/logo.svg" alt="logo">
+            </a>
+            <p>Lorem ipsum dolor sit amet consectetur. Scelerisque eget semper nisi sed tempor. Tempor etiam eget dictum aliquet platea hendrerit ornare amet.</p>
+          </div>
+          <div class="footer__col">
+            <ul>
+              <li>
+                <a href="#">F.A.Q</a>
+              </li>
+              <li>
+                <a href="#">Sale</a>
+              </li>
+              <li>
+                <a href="#">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul>
+              <li>
+                <a href="#">Shipping and delivery</a>
+              </li>
+              <li>
+                <a href="#">Returns and exchanges</a>
+              </li>
+              <li>
+                <a href="#">Methods of payment</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul>
+              <li>
+                <a href="tel:+380123456789">
+                  <img src="images/icons/tel.svg" alt="tel">
+                  +38 (012) 345 67 89
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@company.com">
+                  <img src="images/icons/mail.svg" alt="mail">
+                  info@company.com
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <img src="images/icons/mark.svg" alt="mark">
+                  Country. str. 12, Street name
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© Copyright 2024</p>
+          <img src="images/content/footer-pay.png" alt="pay">
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -628,7 +688,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
   <script src="js/main.min.js"></script>
 
 

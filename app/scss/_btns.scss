@@ -34,5 +34,8 @@
 	&--yellow{
 		background-color: #FFED00;
 		color: #2B2A29;
+		&:hover{
+			color: #fff !important;
+		}
 	}
 }
