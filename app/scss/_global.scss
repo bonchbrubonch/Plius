@@ -24,9 +24,12 @@ li {
 	margin: 0;
 	padding: 0;
 }
-input{
+
+input,
+textarea {
 	outline: none;
 }
+
 h1,
 h2,
 h3,
@@ -46,6 +49,7 @@ body {
 	font-family: 'Gilroy';
 	color: #2b2a29;
 	letter-spacing: 0.3px;
+	background-color: #FEFEFE;
 }
 
 
@@ -82,7 +86,8 @@ body {
 	line-height: 120%;
 	letter-spacing: 1.2px;
 	text-transform: capitalize;
-	&::after{
+
+	&::after {
 		content: "";
 		position: absolute;
 		width: 22px;
@@ -141,7 +146,13 @@ body {
 
 		a {
 			color: #2B2A29;
+			text-decoration: underline;
+			text-decoration-color: transparent;
 			transition: linear .2s;
+
+			&:hover {
+				text-decoration-color: #2B2A29;
+			}
 		}
 	}
 }
@@ -162,6 +173,7 @@ body {
 		font-weight: 500;
 		line-height: 18px;
 		text-align: center;
+		width: fit-content;
 	}
 
 	&__yellow {
@@ -187,16 +199,19 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	&__inner{
+
+	&__inner {
 		display: flex;
 		flex-direction: column;
 	}
+
 	&__img {
 		position: relative;
 		height: 365px;
 		width: 100%;
 		margin: 0 0 25px 0;
 		flex-shrink: 0;
+
 		img {
 			position: absolute;
 			top: 0;
@@ -244,17 +259,17 @@ body {
 		text-align: center;
 		height: 36px;
 		-ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -ms-line-clamp: 2;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    display: -webkit-box;
-    display: box;
-    word-wrap: break-word;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-ms-line-clamp: 2;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		display: -webkit-box;
+		display: box;
+		word-wrap: break-word;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
 	}
 
 	p {
@@ -368,6 +383,73 @@ body {
 	.btn {
 		height: 32px;
 	}
+
+	&__md {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 0 -20px;
+
+		.form__group {
+			width: calc(50% - 20px);
+			margin: 0 0 20px 20px;
+		}
+	}
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 20px 0;
+		input {
+			padding: 10px;
+			width: 100%;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 140%;
+			border: none;
+			background-color: #EEEEEE;
+
+			&::placeholder {
+				color: rgb(153, 153, 153);
+			}
+		}
+		textarea{
+			width: 100% !important;
+			resize: none;
+			padding: 10px;
+			height: 80px !important;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 140%;
+			border: none;
+			background-color: #EEEEEE;
+		}
+		label {
+			display: flex;
+			margin: 0 0 3px 0;
+			color: rgb(43, 42, 41);
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 140%;
+		}
+	}
+
+	&__rating {
+		display: flex;
+		align-items: center;
+		margin: 0 0 20px 0;
+		&>span {
+			display: flex;
+			margin: 0 20px 0 0;
+			color: rgb(43, 42, 41);
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 140%;
+		}
+	}
+
+
+
+
 }
 
 /*end form==============*/
@@ -440,3 +522,49 @@ body {
 
 
 /*end pagination============*/
+
+/*start calc===========*/
+.calc {
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+	background-color: #EEEEEE;
+
+	&__minus,
+	&__plus {
+		padding: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	input {
+		padding: 0 35px;
+		width: 100%;
+		height: 100%;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		text-align: center;
+		color: rgb(43, 42, 41);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 140%;
+	}
+
+	&__plus {
+		left: auto;
+		right: 0;
+	}
+}
+
+/*end calc===========*/

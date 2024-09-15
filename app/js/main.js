@@ -1,6 +1,6 @@
 const navOffset = document.querySelector('.header').offsetTop + 200;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const scrolled = window.scrollY;
 
   if (scrolled > navOffset) {
@@ -55,7 +55,35 @@ var swiper = new Swiper(".review__slider", {
   },
 });
 
+var swiper = new Swiper(".product__slider-side", {
+  loop: true,
+  spaceBetween: 20,
+  slidesPerView: 4,
 
+  breakpoints: {
+    767: {
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      direction: "vertical",
+    },
+  }
+});
+var swiper2 = new Swiper(".product__slider", {
+  loop: true,
+  effect: "fade",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});
+
+
+
+//rating star
 $(".rateYo_reviews").rateYo({
   starWidth: "12px",
   ratedFill: "#FFC700",
@@ -63,13 +91,29 @@ $(".rateYo_reviews").rateYo({
   rating: 5,
   readOnly: true,
 });
+$(".rateYo_choice").rateYo({
+  starWidth: "14px",
+  ratedFill: "#FFC700",
+  spacing: "2px",
+  rating: 0,
+});
 
+
+
+
+//select
 $(".filter_by").select2({
+  minimumResultsForSearch: -1,
+  placeholder: "Current Number of Clients",
+});
+$(".color").select2({
   minimumResultsForSearch: -1,
   placeholder: "Current Number of Clients",
 });
 
 
+
+//filter
 $(".category-listt__child-item").on("click", function () {
   $(this).toggleClass("open");
 });
