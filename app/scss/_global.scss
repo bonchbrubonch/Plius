@@ -51,7 +51,9 @@ body {
 	letter-spacing: 0.3px;
 	background-color: #FEFEFE;
 }
-
+body.lock{
+	overflow: hidden;
+}
 
 .wrapper {
 	display: flex;

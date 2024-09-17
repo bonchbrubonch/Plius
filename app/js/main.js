@@ -1,3 +1,4 @@
+//клас sticky для шапки при скроллі
 const navOffset = document.querySelector('.header').offsetTop + 200;
 
 window.addEventListener('scroll', function () {
@@ -10,19 +11,68 @@ window.addEventListener('scroll', function () {
   }
 });
 
+/*меню гамбургер*/
+const menuBtn = document.querySelector(".header__menu-btn");
+const navMenu = document.querySelector(".header__nav");
+const header = document.querySelector("header");
+
+if (menuBtn && navMenu && header) {
+  menuBtn.addEventListener("click", function () {
+    this.classList.toggle("active");
+    navMenu.classList.toggle("open");
+    document.body.classList.toggle("lock");
+    header.classList.toggle("active"); // Add this line
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const categoryTitles = document.querySelectorAll(".header__nav");
+
+  categoryTitles.forEach(function (title) {
+    title.addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  });
+});
+
+
+$(".category-listt__close").on("click", function () {
+  $(".category-listt").removeClass("open");
+  $("body").removeClass("lock");
+});
+
+$(".filter-btn").on("click", function () {
+  $(".category-listt").addClass("open");
+  $("body").addClass("lock");
+});
+
 
 //toggle клас до блоку пошуку
-document.addEventListener('click', function (event) {
-  const searchIcon = document.querySelector('.header__search-icon');
-  const searchInner = document.querySelector('.header__search');
+document.addEventListener('DOMContentLoaded', () => {
+  const searchIcons = document.querySelectorAll('.header__search-icon, .underfooter__search-icon');
+  const closeButtons = document.querySelectorAll('.header__close, .underfooter__close');
+  const searchContainers = document.querySelectorAll('.header__search, .underfooter__search');
 
-  if (searchIcon.contains(event.target)) {
-    searchInner.classList.toggle('open');
-  }
-  else if (!searchInner.contains(event.target)) {
-    searchInner.classList.remove('open');
-  }
+  searchIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      const targetContainer = document.querySelector(`.${icon.classList[0].split('__')[0]}__search`);
+      targetContainer.classList.add('open');
+    });
+  });
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetContainer = document.querySelector(`.${button.classList[0].split('__')[0]}__search`);
+      targetContainer.classList.remove('open');
+    });
+  });
 });
+
+
+
+
+
+
 
 
 //sliders
@@ -36,23 +86,43 @@ var swiper = new Swiper(".intro__slider", {
 });
 
 var swiper = new Swiper(".product-slider", {
-  slidesPerView: 4,
-  spaceBetween: 20,
+  slidesPerView: 2,
+  spaceBetween: 15,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  }
 });
 
 var swiper = new Swiper(".review__slider", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  }
 });
 
 var swiper = new Swiper(".product__slider-side", {
