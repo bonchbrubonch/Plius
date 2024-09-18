@@ -56,7 +56,7 @@ $(".category-listt__chek").on("click", function () {
 
 $(".category-listt__title").on("click", function () {
   $(this).toggleClass("active");
-  $(this).next().slideToggle(300); // плавне розгортання наступного елемента
+  $(this).next().slideToggle(300);
 });
 
 $(".category-listt__close").on("click", function () {
@@ -68,6 +68,11 @@ $(".filter-btn").on("click", function () {
   $(".category-listt").addClass("open");
   $("body").addClass("lock");
 });
+
+$(".form__input-show").on("click", function () {
+  $(this).toggleClass("active");
+});
+
 
 const productAdd = document.querySelector('.product__add');
 
@@ -199,3 +204,20 @@ $(".color").select2({
   minimumResultsForSearch: -1,
   placeholder: "Current Number of Clients",
 });
+
+
+//accordeon
+$(".accordeon dd").hide().prev().click(function () {
+  $(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
+  $(this).next().not(":visible").slideDown().prev().addClass("active");
+  $("dl").removeClass("open");
+  $(this).parent().toggleClass("open");
+});
+
+const bottomTextElement = document.querySelector('.form__bottom-text');
+
+// Функція для тогл класу 'active' для чексбоксу форми
+function toggleActiveClass() {
+  bottomTextElement.classList.toggle('active');
+}
+bottomTextElement.addEventListener('click', toggleActiveClass);

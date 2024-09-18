@@ -51,7 +51,8 @@ body {
 	letter-spacing: 0.3px;
 	background-color: #FEFEFE;
 }
-body.lock{
+
+body.lock {
 	overflow: hidden;
 }
 
@@ -161,6 +162,14 @@ body.lock{
 
 /*end breadcrumbs=============*/
 
+.page-padding {
+	padding: 90px 0 120px;
+
+	.title {
+		margin: 0;
+	}
+}
+
 /*start stickers==============*/
 .stickers {
 	position: absolute;
@@ -225,21 +234,31 @@ body.lock{
 			transition: linear .3s;
 			object-fit: cover;
 		}
+
+		&:hover {
+			.product-item__img-one {
+				opacity: 0;
+			}
+
+			.product-item__img-two {
+				opacity: 1;
+			}
+		}
 	}
 
 	&__img-two {
 		opacity: 0;
 	}
 
-	&:hover {
-		.product-item__img-one {
-			opacity: 0;
-		}
+	// &:hover {
+	// 	.product-item__img-one {
+	// 		opacity: 0;
+	// 	}
 
-		.product-item__img-two {
-			opacity: 1;
-		}
-	}
+	// 	.product-item__img-two {
+	// 		opacity: 1;
+	// 	}
+	// }
 
 	&__btns {
 		display: flex;
@@ -354,7 +373,132 @@ body.lock{
 /*end arrows==========*/
 
 /*start form==============*/
+.basket-form {
+	display: flex;
+	margin: 0 0 0 -25px;
+	flex-wrap: wrap;
+
+	&__label {
+		display: flex;
+		margin: 0 0 20px 25px;
+	}
+
+	&__radio {
+		display: none;
+	}
+
+	&__check-fake {
+		margin: 2px 0 0 0;
+		position: relative;
+		width: 15px;
+		height: 15px;
+		flex-shrink: 0;
+		border: 2px solid #D3CAFF;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			width: 7px;
+			height: 7px;
+			background-color: #FFED00;
+			border-radius: 50%;
+			opacity: 0;
+			transition: linear .2s;
+		}
+	}
+
+	.basket-form__radio:checked+.basket-form__check-fake {
+		border: 2px solid #FFED00;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	&__check-text {
+		color: rgb(22, 17, 12);
+		font-size: 14px;
+		cursor: pointer;
+		margin: 0 0 0 10px;
+	}
+}
+
 .form {
+	&__pass-wrap {
+		position: relative;
+	}
+
+	&__input-show {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 20px;
+		display: block;
+		width: 15px;
+		height: 15px;
+		background-image: url("../images/icons/eye-1.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	&__input-show.active {
+		background-image: url("../images/icons/eye-2.svg");
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 40px 0;
+
+		a {
+			color: rgb(22, 21, 25);
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 140%;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			transition: linear .2s;
+
+			&:hover {
+				text-decoration-color: rgb(22, 21, 25);
+			}
+		}
+	}
+
+	&__bottom-text {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		span {
+			display: block;
+			margin: 0 10px 0 0;
+			width: 16px;
+			height: 16px;
+			border: 1px solid rgb(153, 153, 153);
+		}
+	}
+
+	&__bottom-text.active {
+		span {
+			opacity: 1;
+			border-color: #FFED00;
+			background-image: url("../images/icons/check.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+	}
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -398,10 +542,22 @@ body.lock{
 		}
 	}
 
+	&__sm {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 0 -20px;
+
+		.form__group {
+			width: calc(33.33333% - 20px);
+			margin: 0 0 20px 20px;
+		}
+	}
+
 	&__group {
 		display: flex;
 		flex-direction: column;
 		margin: 0 0 20px 0;
+
 		input {
 			padding: 10px;
 			width: 100%;
@@ -415,7 +571,8 @@ body.lock{
 				color: rgb(153, 153, 153);
 			}
 		}
-		textarea{
+
+		textarea {
 			width: 100% !important;
 			resize: none;
 			padding: 10px;
@@ -426,6 +583,7 @@ body.lock{
 			border: none;
 			background-color: #EEEEEE;
 		}
+
 		label {
 			display: flex;
 			margin: 0 0 3px 0;
@@ -440,6 +598,7 @@ body.lock{
 		display: flex;
 		align-items: center;
 		margin: 0 0 20px 0;
+
 		&>span {
 			display: flex;
 			margin: 0 20px 0 0;
@@ -489,7 +648,8 @@ body.lock{
 	line-height: 140%;
 	border: 1px solid rgb(153, 153, 153);
 	transition: linear .2s;
-	&:hover{
+
+	&:hover {
 		border-color: #FFED00;
 	}
 }
@@ -510,7 +670,7 @@ body.lock{
 	outline: none;
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0) !important;
-	
+
 }
 
 .pagination__btn-prev {
