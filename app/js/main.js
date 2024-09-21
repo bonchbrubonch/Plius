@@ -73,6 +73,16 @@ $(".form__input-show").on("click", function () {
   $(this).toggleClass("active");
 });
 
+  /*start cabinet-show=======*/
+  $(".cabinet-show").on("click", function () {
+    $("body").addClass("lock");
+    $(".cabinet__left").addClass("open");
+  });
+  $(".cabinet-menu__close").on("click", function () {
+    $("body").removeClass("lock");
+    $(".cabinet__left").removeClass("open");
+  });
+  /*end cabinet-show=======*/
 
 const productAdd = document.querySelector('.product__add');
 
