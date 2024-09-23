@@ -195,7 +195,7 @@ $(".rateYo_reviews").rateYo({
   starWidth: "12px",
   ratedFill: "#FFC700",
   spacing: "2px",
-  rating: 5,
+  rating: 4,
   readOnly: true,
 });
 $(".rateYo_choice").rateYo({
@@ -223,6 +223,13 @@ $(".accordeon dd").hide().prev().click(function () {
   $("dl").removeClass("open");
   $(this).parent().toggleClass("open");
 });
+
+// Додаємо клас "open" для першого елемента
+$(".accordeon dl:first").addClass("open");
+// Показуємо відповідний "dd" для першого елемента
+$(".accordeon dl:first dd").show();
+$(".accordeon dl:first dt").addClass("active");
+
 
 const bottomTextElement = document.querySelector('.form__bottom-text');
 

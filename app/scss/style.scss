@@ -55,11 +55,19 @@
 			text-decoration-color: transparent;
 			transition: linear .2s;
 			text-decoration-line: underline;
-			text-decoration-thickness: 3px;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 2px;
 
 			&:hover {
 				text-decoration-color: #FFED00;
 			}
+		}
+	}
+
+	.header__item-child {
+		a {
+			text-decoration-thickness: 1px;
+
 		}
 	}
 
@@ -304,9 +312,6 @@
 	border: none;
 }
 
-.header.sticky {
-	box-shadow: 0 0 5px #8a8686;
-}
 
 .underfooter__close,
 .header__close {
@@ -441,6 +446,9 @@
 		height: auto;
 	}
 
+	.product-item {
+		height: 100%;
+	}
 }
 
 /*end box-slider========*/
@@ -466,6 +474,11 @@
 		.title {
 			margin: 0;
 		}
+	}
+
+	.subcategory-filter .select2-container--default .select2-selection--single {
+		border: none;
+		border-radius: 0;
 	}
 }
 
@@ -535,11 +548,25 @@
 		position: relative;
 	}
 
+	.swiper-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+	}
+
+	.swiper-slide {
+		height: auto;
+	}
+
 	&__item {
+		display: flex;
+		flex-direction: column;
+
 		h6 {
 			font-size: 16px;
 			font-weight: 600;
 			line-height: 18px;
+			margin: 0 0 5px 0;
 		}
 
 		span {
@@ -630,6 +657,7 @@
 		word-wrap: break-word;
 		-webkit-box-orient: vertical;
 		box-orient: vertical;
+		flex: 1 1 auto;
 	}
 
 	&__more {
@@ -651,6 +679,7 @@
 
 		&:hover {
 			text-decoration-color: #FFED00;
+			color: #2b2a29;
 
 			img {
 				transform: translateX(3px);
@@ -687,7 +716,7 @@
 
 		p {
 			margin: 0;
-			font-family: "Montserrat", sans-serif;
+			font-family: 'Gilroy';
 			font-size: 14px;
 			font-weight: 400;
 			line-height: 120%;
@@ -706,6 +735,12 @@
 		line-height: 140%;
 		text-transform: capitalize;
 		padding: 10px 15px;
+	}
+
+	.form {
+		input {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -792,7 +827,7 @@
 	}
 
 	&__title {
-		font-size: 22px;
+		font-size: 16px;
 
 		&::before {
 			opacity: 1;
@@ -1348,6 +1383,9 @@
 		max-width: 525px;
 		width: 100%;
 		height: fit-content;
+		.btn{
+			padding: 15px 18px;
+		}
 	}
 
 }
@@ -1360,7 +1398,7 @@
 		display: flex;
 		justify-content: space-between;
 	}
-
+	
 	&__left {
 		max-width: 740px;
 		width: 100%;
@@ -1371,13 +1409,16 @@
 		padding: 0 0 15px 10px;
 		margin: 0 0 25px 0;
 		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+display: flex;
 		color: rgb(43, 42, 41);
 		border-bottom: 1px solid rgb(238, 238, 238);
 	}
-
+	&__item-inner{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 	&__item-close {
 		position: absolute;
 		top: 0;
@@ -1386,8 +1427,24 @@
 		background-color: transparent;
 		border: none;
 		z-index: 100;
+		img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:hover{
+			.cart__close-one{
+				opacity: 0;
+			}
+			.cart__close-two{
+				opacity: 1;
+			}
+		}
 	}
-
+	&__close-two{
+		opacity: 0;
+	}
 	.product-item__img {
 		margin: 0 20px 0 0;
 		width: 70px;
@@ -1406,7 +1463,7 @@
 
 	&__item-parameter {
 		font-weight: 400;
-
+		font-size: 12px;
 		strong {
 			font-weight: 700;
 		}
@@ -1450,7 +1507,8 @@
 		transition: linear .2s;
 
 		&:hover {
-			text-decoration-color: rgb(153, 153, 153);
+			color: #2b2a29;
+			text-decoration-color: #FFED00;
 		}
 	}
 
@@ -1567,15 +1625,17 @@
 /*start accordeon=========*/
 .accordeon {
 	color: rgb(43, 42, 41);
-
+	max-width: 1030px;
+	margin: 0 auto;
 	dl {
 		padding: 0 30px 30px 30px;
 		transition: linear .2s;
+		border-bottom: 1px solid rgb(238, 238, 238);
 	}
 
 	dl.open {
 		background-color: #EEEEEE;
-
+		pointer-events: none;
 		dt {
 			&::before {
 				opacity: 0;
@@ -1645,6 +1705,9 @@
 	&__right {
 		max-width: 720px;
 		width: 100%;
+		.btn{
+			padding: 15px 18px;
+		}
 	}
 
 	&__box {
@@ -1914,7 +1977,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
+		border-bottom: 1px solid transparent;
+		transition: linear .2s;
+		&:hover{
+			border-color: rgb(238, 238, 238);
+		}
 		a {
 			color: rgb(153, 153, 153);
 			font-size: 14px;
@@ -1930,7 +1997,8 @@
 			background-repeat: no-repeat;
 
 			&:hover {
-				text-decoration-color: rgb(153, 153, 153);
+				color: #2b2a29;
+				text-decoration-color: #FFED00;
 			}
 		}
 	}
@@ -2254,7 +2322,8 @@
 	&__right {
 		max-width: 680px;
 		width: 100%;
-		img{
+
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
@@ -2326,9 +2395,8 @@
 			text-decoration: underline;
 			text-decoration-color: transparent;
 			transition: linear .2s;
-
 			&:hover {
-				text-decoration-color: rgb(43, 42, 41);
+				text-decoration-color: #FFED00;
 			}
 
 			img {
