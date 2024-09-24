@@ -236,3 +236,39 @@ function toggleActiveClass() {
   bottomTextElement.classList.toggle('active');
 }
 bottomTextElement.addEventListener('click', toggleActiveClass);
+
+
+
+//селект для модалок 
+function selectOption(option) {
+  const dropdown = option.closest('.dropdown');
+  const dropbtn = dropdown.querySelector('.dropbtn');
+  const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+  dropbtn.textContent = option.textContent;
+
+  const items = dropdownContent.querySelectorAll('li');
+  items.forEach(item => item.classList.remove('choice'));
+
+  option.classList.add('choice');
+
+  dropdownContent.style.display = 'none';
+}
+
+document.querySelectorAll('.dropbtn').forEach(button => {
+  button.addEventListener('click', function() {
+    const dropdown = button.closest('.dropdown');
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+document.addEventListener('click', function(event) {
+  document.querySelectorAll('.dropdown-content').forEach(dropdownContent => {
+    if (!dropdownContent.closest('.dropdown').contains(event.target)) {
+      dropdownContent.style.display = 'none';
+    }
+  });
+});
+
+
