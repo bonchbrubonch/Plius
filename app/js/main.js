@@ -1,3 +1,109 @@
+$(function () {
+  // select
+  $(".filter_by").select2({
+    minimumResultsForSearch: -1,
+    placeholder: "Current Number of Clients",
+  });
+
+  $(".color").select2({
+    minimumResultsForSearch: -1,
+    placeholder: "Current Number of Clients",
+  });
+  $(".color2").select2({
+    minimumResultsForSearch: -1,
+    placeholder: "Current Number of Clients",
+  });
+
+  //добавляєио клас для бекграунду
+  if ($(window).width() > 992) {
+    $('.header__has-child').on('mouseenter', function () {
+      $('body').addClass('bg-dark');
+    });
+
+    $('.header__has-child').on('mouseleave', function () {
+      $('body').removeClass('bg-dark');
+    });
+  }
+
+  //
+  $('.header__has-child > span').on('click', function () {
+    $(this).parent().toggleClass('open');
+    $(this).siblings('.header__item-child').slideToggle();
+  });
+
+  // filter
+  $(".category-listt__child-item").on("click", function () {
+    $(this).toggleClass("open");
+  });
+
+  $(".category-listt__chek").on("click", function () {
+    $(this).toggleClass("active");
+  });
+
+  $(".category-listt__title").on("click", function () {
+    $(this).toggleClass("active");
+    $(this).next().slideToggle(300);
+  });
+
+  $(".category-listt__close").on("click", function () {
+    $(".category-listt").removeClass("open");
+    $("body").removeClass("lock");
+  });
+
+  $(".filter-btn").on("click", function () {
+    $(".category-listt").addClass("open");
+    $("body").addClass("lock");
+  });
+
+  $(".form__input-show").on("click", function () {
+    $(this).toggleClass("active");
+  });
+
+  /*start cabinet-show=======*/
+  $(".cabinet-show").on("click", function () {
+    $("body").addClass("lock");
+    $(".cabinet__left").addClass("open");
+  });
+  $(".cabinet-menu__close").on("click", function () {
+    $("body").removeClass("lock");
+    $(".cabinet__left").removeClass("open");
+  });
+  /*end cabinet-show=======*/
+  //accordeon
+  $(".accordeon dd").hide().prev().click(function () {
+    $(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
+    $(this).next().not(":visible").slideDown().prev().addClass("active");
+    $("dl").removeClass("open");
+    $(this).parent().toggleClass("open");
+  });
+
+  // Додаємо клас "open" для першого елемента
+  $(".accordeon dl:first").addClass("open");
+  // Показуємо відповідний "dd" для першого елемента
+  $(".accordeon dl:first dd").show();
+  $(".accordeon dl:first dt").addClass("active");
+
+  // rating star
+  $(".rateYo_reviews").rateYo({
+    starWidth: "12px",
+    ratedFill: "#FFC700",
+    spacing: "2px",
+    rating: 4,
+    readOnly: true,
+  });
+  $(".rateYo_choice").rateYo({
+    starWidth: "14px",
+    ratedFill: "#FFC700",
+    spacing: "2px",
+    rating: 0,
+  });
+
+
+  $('[data-fancybox]').fancybox({
+    // Ваші параметри Fancybox
+});
+
+});
 // клас sticky для шапки при скроллі
 const navOffset = document.querySelector('.header').offsetTop + 200;
 
@@ -36,71 +142,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//добавляєио клас для бекграунду
-if ($(window).width() > 992) {
-  $('.header__has-child').on('mouseenter', function() {
-    $('body').addClass('bg-dark');
-  });
 
-  $('.header__has-child').on('mouseleave', function() {
-    $('body').removeClass('bg-dark');
-  });
-}
-
-
-
-//
-$('.header__has-child > span').on('click', function() {
-  $(this).parent().toggleClass('open');
-  $(this).siblings('.header__item-child').slideToggle();
-});
-
-//
-
-
-// filter
-$(".category-listt__child-item").on("click", function () {
-  $(this).toggleClass("open");
-});
-
-$(".category-listt__chek").on("click", function () {
-  $(this).toggleClass("active");
-});
-
-$(".category-listt__title").on("click", function () {
-  $(this).toggleClass("active");
-  $(this).next().slideToggle(300);
-});
-
-$(".category-listt__close").on("click", function () {
-  $(".category-listt").removeClass("open");
-  $("body").removeClass("lock");
-});
-
-$(".filter-btn").on("click", function () {
-  $(".category-listt").addClass("open");
-  $("body").addClass("lock");
-});
-
-$(".form__input-show").on("click", function () {
-  $(this).toggleClass("active");
-});
-
-  /*start cabinet-show=======*/
-  $(".cabinet-show").on("click", function () {
-    $("body").addClass("lock");
-    $(".cabinet__left").addClass("open");
-  });
-  $(".cabinet-menu__close").on("click", function () {
-    $("body").removeClass("lock");
-    $(".cabinet__left").removeClass("open");
-  });
-  /*end cabinet-show=======*/
 
 const productAdd = document.querySelector('.product__add');
 
 if (productAdd) {
-  productAdd.addEventListener('click', function() {
+  productAdd.addEventListener('click', function () {
     this.classList.toggle('active');
   });
 }
@@ -183,52 +230,6 @@ var swiper2 = new Swiper(".product__slider", {
   },
 });
 
-// rating star
-$(".rateYo_reviews").rateYo({
-  starWidth: "12px",
-  ratedFill: "#FFC700",
-  spacing: "2px",
-  rating: 4,
-  readOnly: true,
-});
-$(".rateYo_choice").rateYo({
-  starWidth: "14px",
-  ratedFill: "#FFC700",
-  spacing: "2px",
-  rating: 0,
-});
-
-// select
-$(".filter_by").select2({
-  minimumResultsForSearch: -1,
-  placeholder: "Current Number of Clients",
-});
-
-$(".color").select2({
-  minimumResultsForSearch: -1,
-  placeholder: "Current Number of Clients",
-});
-$(".color2").select2({
-  minimumResultsForSearch: -1,
-  placeholder: "Current Number of Clients",
-});
-
-
-//accordeon
-$(".accordeon dd").hide().prev().click(function () {
-  $(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
-  $(this).next().not(":visible").slideDown().prev().addClass("active");
-  $("dl").removeClass("open");
-  $(this).parent().toggleClass("open");
-});
-
-// Додаємо клас "open" для першого елемента
-$(".accordeon dl:first").addClass("open");
-// Показуємо відповідний "dd" для першого елемента
-$(".accordeon dl:first dd").show();
-$(".accordeon dl:first dt").addClass("active");
-
-
 const bottomTextElement = document.querySelector('.form__bottom-text');
 
 // Функція для тогл класу 'active' для чексбоксу форми
@@ -238,37 +239,25 @@ function toggleActiveClass() {
 bottomTextElement.addEventListener('click', toggleActiveClass);
 
 
-
 //селект для модалок 
 function selectOption(option) {
-  const dropdown = option.closest('.dropdown');
-  const dropbtn = dropdown.querySelector('.dropbtn');
-  const dropdownContent = dropdown.querySelector('.dropdown-content');
-
+  const parentDropdown = option.closest('.dropdown');
+  const dropbtn = parentDropdown.querySelector('.dropbtn');
   dropbtn.textContent = option.textContent;
 
-  const items = dropdownContent.querySelectorAll('li');
-  items.forEach(item => item.classList.remove('choice'));
+  const optionsList = parentDropdown.querySelectorAll('.dropdown-content li');
 
-  option.classList.add('choice');
-
-  dropdownContent.style.display = 'none';
-}
-
-document.querySelectorAll('.dropbtn').forEach(button => {
-  button.addEventListener('click', function() {
-    const dropdown = button.closest('.dropdown');
-    const dropdownContent = dropdown.querySelector('.dropdown-content');
-    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-  });
-});
-
-document.addEventListener('click', function(event) {
-  document.querySelectorAll('.dropdown-content').forEach(dropdownContent => {
-    if (!dropdownContent.closest('.dropdown').contains(event.target)) {
-      dropdownContent.style.display = 'none';
+  optionsList.forEach((item) => {
+    if (item === option) {
+      item.classList.add('choice'); 
+    } else {
+      item.classList.remove('choice'); 
     }
   });
-});
+}
+
+
+
+
 
 
