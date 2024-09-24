@@ -74,6 +74,23 @@ body.lock {
 		bottom: 0;
 		left: 0;
 		background-color: rgba(#000, .4);
+
+	}
+}
+
+body.bg-dark {
+
+	&::after {
+		content: "";
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, .4);
+		z-index: 199;
 	}
 }
 
@@ -254,18 +271,22 @@ body.lock {
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
-		&:hover{
-			.cart__close-one{
+
+		&:hover {
+			.cart__close-one {
 				opacity: 0;
 			}
-			.cart__close-two{
+
+			.cart__close-two {
 				opacity: 1;
 			}
 		}
 	}
-	.cart__close-two{
+
+	.cart__close-two {
 		opacity: 0;
 	}
+
 	&__inner {
 		display: flex;
 		flex-direction: column;

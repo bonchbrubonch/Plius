@@ -21,6 +21,7 @@ if (menuBtn && navMenu && header) {
     this.classList.toggle("active");
     navMenu.classList.toggle("open");
     document.body.classList.toggle("lock");
+    document.body.classList.toggle("bg-dark");
     header.classList.toggle("active");
   });
 }
@@ -35,15 +36,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelectorAll('.header__has-child > span').forEach(span => {
-  span.addEventListener('click', function () {
-    const parent = this.closest('.header__has-child');
-    const child = parent.querySelector('.header__item-child');
-    if (child) {
-      child.classList.toggle('open');
-    }
+//добавляєио клас для бекграунду
+document.querySelectorAll('.header__has-child').forEach(function(element) {
+  element.addEventListener('mouseenter', function() {
+      document.body.classList.add('bg-dark');
+  });
+
+  element.addEventListener('mouseleave', function() {
+      document.body.classList.remove('bg-dark');
   });
 });
+
+
+//
+document.querySelectorAll('.header__has-child > span').forEach(span => {
+  span.addEventListener('click', function() {
+    this.parentElement.classList.toggle('open');
+  });
+});
+
+//
+
 
 // filter
 $(".category-listt__child-item").on("click", function () {
@@ -92,26 +105,6 @@ if (productAdd) {
   });
 }
 
-// toggle клас до блоку пошуку
-document.addEventListener('DOMContentLoaded', () => {
-  const searchIcons = document.querySelectorAll('.header__search-icon, .underfooter__search-icon');
-  const closeButtons = document.querySelectorAll('.header__close, .underfooter__close');
-  const searchContainers = document.querySelectorAll('.header__search, .underfooter__search');
-
-  searchIcons.forEach(icon => {
-    icon.addEventListener('click', () => {
-      const targetContainer = document.querySelector(`.${icon.classList[0].split('__')[0]}__search`);
-      targetContainer.classList.add('open');
-    });
-  });
-
-  closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetContainer = document.querySelector(`.${button.classList[0].split('__')[0]}__search`);
-      targetContainer.classList.remove('open');
-    });
-  });
-});
 
 // sliders
 var swiper = new Swiper(".intro__slider", {

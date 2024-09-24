@@ -24,6 +24,10 @@
     integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -68,22 +72,11 @@
             </li>
           </ul>
         </nav>
-        <form class="header__search">
+        <a href="#" class="header__search" data-fancybox data-src="#modal-1">
           <div class="header__search-icon">
             <img src="images/icons/search.svg" alt="search">
           </div>
-          <div class="header__search-inner">
-            <button class="header__close" type="button">
-              <img src="images/icons/search-close.svg" alt="close">
-            </button>
-            <div class="header__search-input-wrap">
-              <input type="text" required>
-            </div>
-            <button class="header__search-btn">
-              <img src="images/icons/search.svg" alt="search">
-            </button>
-          </div>
-        </form>
+        </a>
         <a href="#" class="header__avatar">
           <span>w</span>
         </a>
@@ -700,24 +693,12 @@
       <div class="container">
         <div class="underfooter__inner">
           <div class="underfooter__col">
-            <div class="underfooter__search">
+            <a href="#" class="underfooter__search" data-fancybox data-src="#modal-1">
               <img class="underfooter__search-icon" src="images/icons/search.svg" alt="search">
               <div class="underfooter__text">
                 Search
               </div>
-              <div class="underfooter__search-inner">
-                <button class="underfooter__close">
-                  <img src="images/icons/search-close.svg" alt="close">
-                </button>
-                <div class="underfooter__search-input-wrap">
-                  <input type="text" required="">
-                </div>
-                <button class="underfooter__search-btn">
-                  <img src="images/icons/search.svg" alt="search">
-                </button>
-
-              </div>
-            </div>
+            </a>
           </div>
           <a href="#" class="underfooter__col">
             <img src="images/icons/user-cabinet.svg" alt="icon">
@@ -748,6 +729,18 @@
     </div>
   </div>
 
+  <div id="modal-1" class="modal">
+    <form class="form">
+      <span>Search</span>
+      <div class="modal__input-wrap">
+        <input type="text" required placeholder=" Alexander">
+        <button type="submit"><img src="images/icons/search.svg" alt="search"></button>
+      </div>
+    </form>
+  </div>
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -760,6 +753,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
     integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="js/main.min.js"></script>

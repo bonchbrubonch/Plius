@@ -24,6 +24,10 @@
     integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -98,97 +102,12 @@
   <div class="wrapper">
     <main class="main">
 
-      <section class="cabinet-page page-padding">
-        <div class="container">
-          <h3 class="title">Profile</h3>
-          <div class="breadcrumbs">
-            <div class="breadcrumbs__inner">
-              <ul class="breadcrumbs__list">
-                <li> <a href="#">Home</a></li>
-                <li> <span>Profile</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="cabinet">
-            <div class="cabinet__inner">
-              <div class="cabinet__left">
-                <button class="cabinet-menu__close">
-                  <img src="images/icons/search-close.svg" alt="close">
-                </button>
-                <h6 class="cabinet__left-user">John Doe</h6>
-                <div class="cabinet__left-mail">johndoe@example.com</div>
-                <ul>
-                  <li><a href="#" class="active">Profile</a></li>
-                  <li><a href="#">Orders</a></li>
-                  <li><a href="#">Wish list</a></li>
-                  <li><a href="#">Change password</a></li>
-                  <li><a href="#">Log out</a></li>
-                </ul>
-              </div>
-              <div class="cabinet__right">
-                <button class="cabinet-show">
-                  <img src="images/icons/men-bt.svg" alt="icon">
-                  Menu
-                </button>
-                <h5>John Doe</h5>
-                <form class="form">
-                  <div class="form__md">
-                    <div class="form__group">
-                      <label for="email">Email</label>
-                      <input id="email" maxlength="40" name="email" required="" type="email"
-                        placeholder="Email address">
-                    </div>
-                    <div class="form__group">
-                      <label for="phone">Phone</label>
-                      <input id="phone" maxlength="40" name="phone" required="" type="number" placeholder="Phone">
-                    </div>
-                  </div>
-                  <div class="form__sm">
-                    <div class="form__group">
-                      <label for="city">City</label>
-                      <input id="city" maxlength="40" name="city" required="" type="text" placeholder="Vilnius">
-                    </div>
-                    <div class="form__group">
-                      <label for="street">Street</label>
-                      <input id="street" maxlength="40" name="street" required="" type="text">
-                    </div>
-                    <div class="form__group">
-                      <label for="phone">House number</label>
-                      <input id="House number" maxlength="40" name="House number" required="" type="text">
-                    </div>
-                  </div>
-                  <button class="btn btn--dark">Save changes</button>
-                </form>
-              </div>
-            </div>
-          </div>
+      <div class="container">
+        <a class="btn" href="#" data-fancybox data-src="#modal-2">modal-1</a>
+        <a class="btn" href="#" data-fancybox data-src="#modal-3">modal-2</a>
+      </div>
 
 
-        </div>
-      </section>
-      <section class="subscribe">
-        <div class="container">
-          <div class="subscribe__inner">
-            <div class="subscribe__left">
-              <h3 class="title">
-                Don't miss the latest news
-              </h3>
-              <p>Subscribe to the newsletter to find out the most important news and receive exclusive offers!</p>
-            </div>
-            <div class="subscribe__right">
-              <form class="form">
-                <div class="form__inner">
-                  <div class="form__input-wrap">
-                    <input type="email" placeholder="Your email address" required>
-                  </div>
-                  <button class="btn btn--yellow" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -260,6 +179,141 @@
     </footer>
   </div>
 
+
+
+  <div id="modal-2" class="modal">
+    <div class="modal__inner">
+      <div class="modal__left">
+        <img src="images/content/product-1.webp" alt="img">
+      </div>
+      <div class="modal__right">
+        <div class="product__right">
+          <ul class="stickers">
+            <li class="stickers__yellow">best</li>
+          </ul>
+          <div class="product-item__box">
+            <div class="product-item__price">
+              220 €
+            </div>
+            <div class="product-item__old-price">
+              250 €
+            </div>
+          </div>
+          <h6>Product name product name</h6>
+          <div class="rateYo-wrap">
+            <div class="rateYo_reviews"></div>
+            <div class="rateYo-review-quantity">
+              (<span>7</span> review)
+            </div>
+          </div>
+          <div class="product__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Blandit est laoreet et sed. Ut commodo facilisis commodo
+              lectus aliquam habitant molestie amet.</p>
+          </div>
+          <ul class="product__list">
+            <li>Eu lacus ante eget tincidunt libero.</li>
+            <li> Vestibulum auctor morbi enim donec elit 30%</li>
+          </ul>
+          <div class="product__box">
+            <div class="product__box-col">
+              <span>Quantity:</span>
+              <div class="calc">
+                <button class="calc__minus">
+                  <img src="images/icons/minus.svg" alt="icon">
+                </button>
+                <input type="text" value="1" readonly>
+                <button class="calc__plus">
+                  <img src="images/icons/plus.svg" alt="icon">
+                </button>
+                <a href="#" class="btn btn--orange">
+                  Переглянути
+                </a>
+              </div>
+            </div>
+            <div class="product__box-col">
+              <span>Color:</span>
+              <div class="select">
+                <select class="color" id="color" required name="color">
+                  <option>Black</option>
+                  <option>Blue</option>
+                  <option>Orange</option>
+                  <option>Pink</option>
+                  <option>Red</option>
+                  <option>White</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="product__btns">
+            <button class="btn btn--dark">Add to cart</button>
+            <button class="product__add">
+              <img class="product__add-one" src="images/icons/heart.svg" alt="like">
+              <img class="product__add-two" src="images/icons/heart2.svg" alt="like">
+            </button>
+          </div>
+
+          <div class="product__bottom">
+            <div class="product__bottom-item">
+              <strong>SKU:</strong>
+              <p>29045-SB</p>
+            </div>
+            <div class="product__bottom-item">
+              <strong>Category: </strong>
+              <p>Category name</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-3" class="modal">
+    <div class="modal__inner">
+      <div class="modal__left">
+        <img src="images/content/product-1.webp" alt="img">
+      </div>
+      <div class="modal__right">
+        <div class="product__right">
+          <h6>Product name product name</h6>
+          <div class="product__box">
+            <div class="product__box-col">
+              <span>Quantity:</span>
+              <div class="calc">
+                <button class="calc__minus">
+                  <img src="images/icons/minus.svg" alt="icon">
+                </button>
+                <input type="text" value="1" readonly>
+                <button class="calc__plus">
+                  <img src="images/icons/plus.svg" alt="icon">
+                </button>
+                <a href="#" class="btn btn--orange">
+                  Переглянути
+                </a>
+              </div>
+            </div>
+            <div class="product__box-col">
+              <span>Color:</span>
+              <div class="select">
+                <select class="color" id="color" required name="color">
+                  <option>Black</option>
+                  <option>Blue</option>
+                  <option>Orange</option>
+                  <option>Pink</option>
+                  <option>Red</option>
+                  <option>White</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="product__btns">
+            <button class="btn btn--dark">Add to cart</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -272,6 +326,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
     integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
