@@ -35,7 +35,7 @@
 	&__nav {
 		margin: 0 0 0 230px;
 
-		ul {
+		&>ul {
 			display: flex;
 		}
 
@@ -2518,8 +2518,8 @@
 			border: none;
 
 			img {
-				width: 100%;
-				height: 100%;
+				width: 20px;
+				height: 20px;
 				object-fit: contain
 			}
 		}
@@ -2561,10 +2561,38 @@
 
 /*end modal======*/
 
+.fancybox-close-small{
+	margin: 30px 30px 0 0;
+	padding: 0;
+	width: 22px;
+	height: 22px;
+	svg	{
+		display: none;
+	}
+	&::after{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/icons/search-close.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	&:hover{
+		&::after{
+			background-image: url("../images/icons/search-close2.svg");
+		}
+	}
+}
 
 
-
-
+.select2-container{
+	z-index: 99999;
+}
 
 
 

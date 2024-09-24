@@ -1,4 +1,8 @@
 @media (min-width: 992px) {
+	.header__item-child {
+		display: flex;
+	}
+
 	.header__has-child {
 		cursor: pointer;
 
@@ -126,7 +130,7 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		height: 300px;
 		z-index: 99;
 		display: flex;
 		padding: 30px 15px 20px;
@@ -262,6 +266,10 @@
 		font-size: 36px;
 	}
 
+	.title::after {
+		top: 20px;
+	}
+
 	.product-item__img {
 		height: 290px;
 		margin: 0 0 10px 0;
@@ -315,6 +323,9 @@
 		.container>.title:first-child {
 			font-size: 28px;
 			margin: 0 0 0px 0 !important;
+			&::after{
+				top: 15px;
+			}
 		}
 	}
 
@@ -403,7 +414,7 @@
 	}
 
 	.header__item-child {
-		display: none !important;
+		// display: none !important;
 		margin: 0 0 0 15px;
 
 		a {
@@ -413,14 +424,15 @@
 	}
 
 	.header__item-child.open {
-		display: block !important;
+		// display: block !important;
 	}
 
-	.header__has-child.open {
-		.header__item-child {
-			display: block !important;
-		}
+	// .header__has-child.open {
+	.header__item-child {
+		display: none;
 	}
+
+	// }
 
 	.cart__inner {
 		flex-direction: column;
@@ -522,7 +534,7 @@
 	}
 
 	.cabinet__left {
-		padding: 70px 0 0 0;
+		padding: 70px 15px 20px 15px;
 		position: fixed;
 		margin: 0;
 		top: 0;
@@ -548,7 +560,7 @@
 		display: block;
 		position: absolute;
 		top: 20px;
-		right: 20px;
+		right: 10px;
 		border: none;
 		background-color: transparent;
 	}
@@ -588,6 +600,10 @@
 		display: none;
 	}
 
+	.header .header__item-child a {
+		width: calc(100% - 15px);
+		border-bottom: 1px solid rgb(238, 238, 238);
+	}
 }
 
 @media (max-width: 768px) {
@@ -630,6 +646,10 @@
 	.title {
 		font-size: 28px;
 		margin: 0 0 35px 0 !important;
+	}
+
+	.title::after {
+		top: 16px;
 	}
 
 	.swiper-button-next,
@@ -1063,7 +1083,7 @@
 	}
 
 	.modal__inner {
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 
 	.modal {
@@ -1072,7 +1092,7 @@
 		}
 
 		.modal__left {
-			margin: 30px 0 0 0;
+			margin: 0 0 30px 0;
 			max-width: 300px;
 		}
 	}
@@ -1080,7 +1100,8 @@
 	#modal-2 {
 		padding: 80px 15px 30px 15px;
 	}
-	#modal-3{
+
+	#modal-3 {
 		padding: 80px 15px 30px 15px;
 	}
 }

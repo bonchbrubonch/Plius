@@ -37,22 +37,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //добавляєио клас для бекграунду
-document.querySelectorAll('.header__has-child').forEach(function(element) {
-  element.addEventListener('mouseenter', function() {
-      document.body.classList.add('bg-dark');
+if ($(window).width() > 992) {
+  $('.header__has-child').on('mouseenter', function() {
+    $('body').addClass('bg-dark');
   });
 
-  element.addEventListener('mouseleave', function() {
-      document.body.classList.remove('bg-dark');
+  $('.header__has-child').on('mouseleave', function() {
+    $('body').removeClass('bg-dark');
   });
-});
+}
+
 
 
 //
-document.querySelectorAll('.header__has-child > span').forEach(span => {
-  span.addEventListener('click', function() {
-    this.parentElement.classList.toggle('open');
-  });
+$('.header__has-child > span').on('click', function() {
+  $(this).parent().toggleClass('open');
+  $(this).siblings('.header__item-child').slideToggle();
 });
 
 //
@@ -203,7 +203,12 @@ $(".filter_by").select2({
   minimumResultsForSearch: -1,
   placeholder: "Current Number of Clients",
 });
+
 $(".color").select2({
+  minimumResultsForSearch: -1,
+  placeholder: "Current Number of Clients",
+});
+$(".color2").select2({
   minimumResultsForSearch: -1,
   placeholder: "Current Number of Clients",
 });
