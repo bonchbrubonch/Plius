@@ -144,6 +144,7 @@ body.bg-dark {
 .breadcrumbs {
 	background-color: transparent;
 	margin: 0 0 75px 0;
+	display: none;
 
 	&__inner {
 		padding: 15px 0;
@@ -612,6 +613,22 @@ body.bg-dark {
 		}
 	}
 
+	.error {
+
+		label,
+		.error-text {
+			color: #FF0000;
+		}
+		input{
+			border: 1px solid #FF0000;
+		}
+		.error-text{
+			display: block;
+		}
+	}
+	.error-text{
+		display: none;
+	}
 	&__sm {
 		display: flex;
 		flex-wrap: wrap;
