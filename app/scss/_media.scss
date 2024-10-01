@@ -609,7 +609,7 @@
 	.more-offers--subcategory .container>.title:first-child,
 	.more-offers--subcategory-filter .container>.title:first-child,
 	.more-offers--sale .container>.title:first-child,
-	.page-padding .container>.title:first-child{
+	.page-padding .container>.title:first-child {
 		margin: 0 0 25px 0 !important;
 	}
 }
@@ -935,6 +935,10 @@
 	.btn {
 		padding: 10px 30px;
 		font-size: 14px !important;
+	}
+
+	#modal-4 .btn {
+		padding: 10px 30px;
 	}
 
 	.product {
