@@ -23,13 +23,17 @@ $(function () {
     $('.header__has-child').on('mouseleave', function () {
       $('body').removeClass('bg-dark');
     });
-  }
 
+    
+  }
+  if ($(window).width() < 992) {
   //
   $('.header__has-child > span').on('click', function () {
     $(this).parent().toggleClass('open');
     $(this).siblings('.header__item-child').slideToggle();
   });
+  }
+
 
   // filter
   $(".category-listt__child-item").on("click", function () {
